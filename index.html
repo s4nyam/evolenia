@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Evo-Lenia portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #666;
+    }
+
+    #text-section,
+    #image-section,
+    #links-section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid #333;
+      padding: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .link:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .link-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    .twitter-tweet {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Evo-Lenia Portal: Capturing Emerging Complexity in Lenia</h1>
+    <div id="text-section">
+      <h2>What is Evo-Lenia portal?</h2>
+      <p>Evo-Lenia is the supporting material for paper - "Capturing Emerging Complexity in Lenia" which is accepted in WIVACE2023</p>
+      <p>Here you will find all code and material to reproduce the paper work. It is divided into multiple parts. Each part corresponds to a Google Colab notebook where you can create your own version of code and run all cells along with other required offline material.</p>
+    </div>
+    
+    <div id="image-section">
+      <h2>Some results from Evo-Lenia</h2>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">An Evolutionary Computation EvoLenia run for 500 generations on default growth function and a handcrafted kernel shows a ring forming bacteria. Amazed by the robustness of Lenia behaviour, while mutating kernel variation based fitness. <br><br>Part of project supervised by <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> <a href="https://t.co/jLvl5E10s2">pic.twitter.com/jLvl5E10s2</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1655672132406222850?ref_src=twsrc%5Etfw">May 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="project-image">
+        <img src="https://ia802700.us.archive.org/15/items/lenia/o2.gif" alt="Project Image 2">
+      </div>
+      <div class="project-image">
+        <img src="https://ia902700.us.archive.org/15/items/lenia/o3.gif" alt="Project Image 3">
+      </div>
+      <!-- <div class="project-image">
+        <img src="https://ia902700.us.archive.org/15/items/lenia/o6.gif" alt="Project Image 1">
+      </div> -->
+      <div class="project-image">
+        <img src="https://ia802700.us.archive.org/15/items/lenia/05.gif" alt="Project Image 1">
+      </div>
+      <div class="project-image">
+        <img src="https://ia902700.us.archive.org/15/items/lenia/07.gif" alt="Project Image 1">
+      </div>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There is a standard taxonomy for a specie to be part of Lenia-verse (Family and Expanded universe). But how about some alien life, that of course do not fulfils the taxonomy or classification, but still helps us understand the dynamics and emergence of complexity! <a href="https://t.co/D7lhs6LZSy">pic.twitter.com/D7lhs6LZSy</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1662160757868355584?ref_src=twsrc%5Etfw">May 26, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    
+    <div id="links-section">
+      <h2>Notebooks (AWS Sagemaker)</h2>
+      <h4>The following drive folders contains various notebooks that can be run on simple t3.medium or r5.xlarge sagemaker instances with 50GB storage space. Please check slides and extra material for exact system requirements.</h4>
+      
+  
+      <a class="link" href="https://drive.google.com/drive/folders/1-F6jkAfBS0vo9rBQLl19Ui8jgr9S2zxq?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">VoT: Evolve new Lenia behaviour using Variation over Time fitness
+      </a>
+      
+
+
+      <br/>
+      <a class="link" href="https://drive.google.com/drive/folders/12NLJuoNY8EhtPN_pXSoS3Kv4388CTGu1?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AE: Evolve new Lenia behaviour using Auto Encoder fitness
+      </a>
+      
+
+      <br/>
+      <a class="link" href="https://drive.google.com/drive/folders/1ifjctF4ioUyYusBSRG1Jy_yskkOI4OtS?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness.
+      </a>
+      
+      <br/>
+      <a class="link" href="https://drive.google.com/drive/folders/1A6m-YQkoLPt4ZCoHqy9Aco0hl1Sl6fZV?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT Known Kernel: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness and mutating known kernels.
+      </a>
+
+      <h2>Other Material</h2>
+      <a class="link" href="https://drive.google.com/file/d/1xtbS6ntVGzyDtTyNGRN3urm6lWoGNqtu/view?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">All known kernels with corresponding Distribution plots.
+      </a>
+      <br/>
+
+
+      <a class="link" href="https://arxiv.org/pdf/2305.09378v1.pdf" target="_blank">
+        <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">Submitted Project Paper at HiØ
+      </a>
+      <br/>
+
+      <a class="link" href="https://drive.google.com/file/d/1RKO4pgvmtRcrPdKmztOM9tHo5m3tilWP/view?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/.zip_OneDrive_icon.svg/2048px-.zip_OneDrive_icon.svg.png">Complete Zip folder for reproducing all notebooks (2.58GB)
+      </a>
+      <br/>
+
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How to capture emerging complexity 🌀 in a 2D grid continuous cellular automata (Lenia) system using Genetic Algorithm 🧬 ? <br><br>arXiv: <a href="https://t.co/403mHYQ9XQ">https://t.co/403mHYQ9XQ</a> 📝 with Aarati and supervision of <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> at <a href="https://twitter.com/hiofnorge?ref_src=twsrc%5Etfw">@hiofnorge</a> <br><br>A thread 🧵</p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1660235194157203458?ref_src=twsrc%5Etfw">May 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
+      <br/>
+
+
+      <a class="link" href="https://hiof-my.sharepoint.com/:p:/g/personal/sanyamj_hiof_no/Ed--jYf3jp1BhVC4feIuYDgBSw-lkB1RHOReEu0NRv1gJA?e=DxtDmi" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png?20210821050414">Supervision Slides (shown at the time of supervision to Prof Stefano Nichele, HiØ)
+      </a>
+      <br/>
+
+
+      <a class="link" href="https://hiof-my.sharepoint.com/:p:/g/personal/sanyamj_hiof_no/EQBC-lhVuBpNr9ZpA8KLiKoBUEz77o6FHBquBxfrrN7mmg?e=QoS9S1" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png?20210821050414">Exam Slides (shown at the time of Exam to Prof Stefano Nichele and Prof Sukalpa Chanda, HiØ)
+      </a>
+      <br/>
+
+      <h2>Complete Applied CS Project course folder</h2>
+      
+
+      <a class="link" href="https://drive.google.com/drive/folders/1TFbzHWZOY1y7a8heA4IClM6YNebbMPDL?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">Drive folder of the complete project
+      </a>
+      
+
+
+      <br/>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Mutating new creatures and complexity for <a href="https://twitter.com/hashtag/NAIM2023?src=hash&amp;ref_src=twsrc%5Etfw">#NAIM2023</a>, Denmark with the Lenia project. <a href="https://twitter.com/hashtag/GeneticAlgorithm?src=hash&amp;ref_src=twsrc%5Etfw">#GeneticAlgorithm</a> <a href="https://twitter.com/hashtag/Lenia?src=hash&amp;ref_src=twsrc%5Etfw">#Lenia</a> <a href="https://twitter.com/hashtag/CellularAutomata?src=hash&amp;ref_src=twsrc%5Etfw">#CellularAutomata</a> with <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> and Aarati<br><br>ref: <a href="https://t.co/403mHYQ9XQ">https://t.co/403mHYQ9XQ</a> <a href="https://t.co/nAg8fDXpBu">pic.twitter.com/nAg8fDXpBu</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1671553532653076487?ref_src=twsrc%5Etfw">June 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+      <br/>
+
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am happy to share that, I got “A” in Advanced Machine Learning for the project on “The Brackish Dataset and Object Detection”, and another “A” for Applied CS project for the project on “Capturing emerging complexity in Lenia”<br><br>1 year completed of Masters🤝</p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1666339004180996096?ref_src=twsrc%5Etfw">June 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png -->
