@@ -88,6 +88,42 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+/* Container for tooltip boundary */
+.tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Stylize the tooltip */
+    .link[title] {
+      position: relative;
+    }
+/* Stylize the tooltip */
+.link[title]::before {
+  content: attr(title);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 14px;
+  white-space: normal;
+  width: 300px; /* Set the width to 300 pixels */
+}
+
+
+    /* Show the tooltip on hover */
+    .link[title]:hover::before {
+      opacity: 1;
+    }
+
+
   </style>
 </head>
 <body>
@@ -123,7 +159,7 @@
     <div id="links-section">
       <h2>Notebooks (AWS Sagemaker)</h2>
       
-      <a class="link" href="https://arxiv.org/abs/2305.09378" target="_blank">
+      <a class="link" href="https://arxiv.org/abs/2305.09378" target="_blank" title="This link opens a arxiv preprint version of the WIVACE 2023 submitted and accepted paper. You can also check older versions for Applied Project submitted paper which contains detailed description of each fitness criteria.">
         <img class="link-icon" src="https://storage.googleapis.com/kaggle-datasets-images/612177/5023398/ed4470482e04000d11d3de82e2fb4389/dataset-card.png?t=2023-02-22-23-00-49">ArXiv Preprint
       </a>
       <br/>
