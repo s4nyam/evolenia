@@ -200,6 +200,19 @@
       max-height: 100%;
       object-fit: contain;
     }
+
+
+
+    /* Close button styles */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -348,8 +361,11 @@
   <div class="zoom-button" onclick="showZoomPopup()">Zoom</div>
 </div>
 
+
 <!-- Zoomed Image Popup -->
 <div class="zoom-popup" onclick="hideZoomPopup()">
+  <!-- Close button -->
+  <span class="close-button" onclick="hideZoomPopup()">&times;</span>
   <img class="zoomed-image" src="" alt="Zoomed Image">
 </div>
      <br/>      <br/> <br/>     
@@ -440,19 +456,18 @@
       // document.querySelector(".slide-wrapper").style.transform = `translateX(${translation}px)`;
     }
   
-    // Function to show the zoomed image popup
-    function showZoomPopup() {
-      const zoomPopup = document.querySelector(".zoom-popup");
-      const zoomedImg = zoomPopup.querySelector(".zoomed-image");
-      zoomedImg.src = imageUrls[currentImage];
-      zoomPopup.style.display = "block";
-    }
-  
-    // Function to hide the zoomed image popup
-    function hideZoomPopup() {
-      const zoomPopup = document.querySelector(".zoom-popup");
-      zoomPopup.style.display = "none";
-    }
+// Function to show the zoomed image popup
+function showZoomPopup() {
+  const zoomPopup = document.querySelector(".zoom-popup");
+  const zoomedImg = zoomPopup.querySelector(".zoomed-image");
+  zoomedImg.src = imageUrls[currentImage];
+  zoomPopup.style.display = "block";
+}
+  // Function to hide the zoomed image popup
+function hideZoomPopup() {
+  const zoomPopup = document.querySelector(".zoom-popup");
+  zoomPopup.style.display = "none";
+}
   
     // Show the first image on page load
     showImage(currentImage);
