@@ -140,7 +140,7 @@
 
     /* Ensure images maintain a ratio of 300x200 (aspect ratio of 3:2) */
     .slideshow-img {
-      width: 100%;
+      width: 350px;
       height: 200px;
       object-fit: cover;
     }
@@ -161,8 +161,8 @@
 
     .prev{
       left: 0;
-      font-size: 5px;
-      padding: 5px;
+      /* font-size: 5px; */
+      /* padding: 5px; */
     }
     .zoom-button {
       left:45%;
@@ -173,8 +173,8 @@
 
     .next {
       right: 0;
-      font-size: 5px;
-      padding: 5px;
+      /* font-size: 5px; */
+      /* padding: 5px; */
     }
     
     .prev:hover, .next:hover, .zoom-button:hover {
@@ -188,7 +188,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: white;
-      padding: 20px;
+      padding: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       z-index: 9999;
     }
@@ -376,9 +376,40 @@
   <script>
     // Array of example image URLs
     const imageUrls = [
-      "https://via.placeholder.com/300x200/FF5733?text=Image+1",
-      "https://via.placeholder.com/300x200/33FF57?text=Image+2",
-      "https://via.placeholder.com/300x200/5733FF?text=Image+3"
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-0.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-1.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-2.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-3.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-4.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-5.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-6.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-7.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-8.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-9.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-10.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-11.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-12.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-13.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-14.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-15.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-16.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-17.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-18.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-19.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-20.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-21.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-22.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-23.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-24.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-25.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-26.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-27.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-28.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-29.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-30.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-31.jpg",
+      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-32.jpg"
+      
       // Add more image URLs here as needed
     ];
   
@@ -403,8 +434,8 @@
       currentImage += n;
       showImage(currentImage);
       // Calculate the translation amount based on currentImage
-      const translation = currentImage * -300;
-      document.querySelector(".slide-wrapper").style.transform = `translateX(${translation}px)`;
+      // const translation = currentImage * -300;
+      // document.querySelector(".slide-wrapper").style.transform = `translateX(${translation}px)`;
     }
   
     // Function to show the zoomed image popup
