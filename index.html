@@ -252,52 +252,52 @@
         <img class="link-icon" src="https://storage.googleapis.com/kaggle-datasets-images/612177/5023398/ed4470482e04000d11d3de82e2fb4389/dataset-card.png?t=2023-02-22-23-00-49">ArXiv Preprint
       </a>
       <br/>
-      <a class="link" href="https://github.com/s4nyam/APCSP" target="_blank">
+      <a class="link" href="https://github.com/s4nyam/APCSP" target="_blank" title="This link redirects to the GitHub repo of this project. It contains notebook for three fitness functions separately. You can also try to check history of commits at different times to understand the project progress over time. Previous commits also contain code for different kernels and playing around with lenia-lh.">
         <img class="link-icon" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png">GitHub Repository
       </a>
       <h4>The following drive folders contains various notebooks that can be run on simple t3.medium or r5.xlarge sagemaker instances with 50GB storage space. Please check slides and extra material for exact system requirements.</h4>
       
       
       
+      <br/>
+      <a class="link" href="https://drive.google.com/drive/folders/12NLJuoNY8EhtPN_pXSoS3Kv4388CTGu1?usp=drive_link" target="_blank" title="In this method, the input data is reconstructed to its original form and then the Mean Squared Error (MSE) between the original data and the reconstructed data is calculated. This is done for all the frames in the input data, and the MSE values are collected in a list. Finally, a standard deviation is calculated over the list of MSE values, which gives an overall measure of how well the input data was reconstructed. If the population standard deviation (pstd) of the list of MSE values is higher, it means that the fitness scores of the individuals in the population are more varied. This indicates that the individuals are performing very differently in terms of their ability to reconstruct the original input. On the other hand, if the pstd is lower, it means that the fitness scores are more similar across the individuals in the population. This indicates that the individuals are performing more similarly in terms of their ability to reconstruct the original input.">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AE: Evolve new Lenia behaviour using Auto Encoder fitness
+      </a>
 
 
       <br/>
   
-      <a class="link" href="https://drive.google.com/drive/folders/1-F6jkAfBS0vo9rBQLl19Ui8jgr9S2zxq?usp=sharing" target="_blank">
+      <a class="link" href="https://drive.google.com/drive/folders/1-F6jkAfBS0vo9rBQLl19Ui8jgr9S2zxq?usp=sharing" target="_blank" title="This method does not require any bottleneck to calculate fitness. It directly takes board input frames and uses pixel values to calculate pstd over frames. First, it uses a threshold to calculate the number of alive cells in each frame. For a continuous CA, the pixel values are in fraction and hence threshold also need to be a decimal value between 0 and 1. Further, after setting the threshold, each frame results a number of alive cells. All frames are processed and a list of number of alive cells is created. Finally, a pstd is calculated over that list. A lower standard deviation means that the CA is more stable and predictable, while a higher standard deviation indicates more randomness or instability.">
         <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">VoT: Evolve new Lenia behaviour using Variation over Time fitness
       </a>
       
 
 
-      <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/12NLJuoNY8EhtPN_pXSoS3Kv4388CTGu1?usp=drive_link" target="_blank">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AE: Evolve new Lenia behaviour using Auto Encoder fitness
-      </a>
       
 
       <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/1ifjctF4ioUyYusBSRG1Jy_yskkOI4OtS?usp=drive_link" target="_blank">
+      <a class="link" href="https://drive.google.com/drive/folders/1ifjctF4ioUyYusBSRG1Jy_yskkOI4OtS?usp=drive_link" target="_blank" title="This method combines both the approaches. First, reconstruction of the original frames is collected using AE. All the reconstructed frames are further passed to VoT method and produces a pstd over the list of alive cells count of each frame. And similar to VoT, a higher pstd is expected here as well. Figure 8 shows Algorithm for AEVoT.">
         <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness.
       </a>
       
       <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/1A6m-YQkoLPt4ZCoHqy9Aco0hl1Sl6fZV?usp=sharing" target="_blank">
+      <a class="link" href="https://drive.google.com/drive/folders/1A6m-YQkoLPt4ZCoHqy9Aco0hl1Sl6fZV?usp=sharing" target="_blank" title="This is AEVoT fitness with initialising population with known kernel pixels. We consider 16x16 size of known kernels. To compare our experiments with handcrafted kernels or known kernel, we perform six experiments keeping growth function and rest of the configuration same. Known kernels are very robust to perturbations. Even after doing mutations for these kernels they show similar behaviour and complexity measurement remains same. However, the growth of fitness happens very slow in those generations, which means known kernels and their behaviour remains robust even after perturbations. Rest of the time even after mutations the fitness measure remained same and hence the overall system remained robust in terms of pixel variation and pixel density. Finally, after handcrafting a kernel with a smoothed spherical Gaussian pixel distribution. Metaphorically, it shows ring like bacteria pattern.">
         <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT Known Kernel: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness and mutating known kernels.
       </a>
 
       <h2>Other Material</h2>
-      <a class="link" href="https://drive.google.com/file/d/1xtbS6ntVGzyDtTyNGRN3urm6lWoGNqtu/view?usp=drive_link" target="_blank">
+      <a class="link" href="https://drive.google.com/file/d/1xtbS6ntVGzyDtTyNGRN3urm6lWoGNqtu/view?usp=drive_link" target="_blank" title="Fig. 16. of the preprint paper, Running 500 generation based simulation for known kernels. The configuration is kept same as the simulation shown in Figure 15 second row. First column shows the initial known kernel, second column shows mutated kernel after 500 generations. Additionally, third column shows best fitness plot and fourth column shows average fitness plot with cumulative mean-average line in between. (Plots have a y-limit of 2000)">
         <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">All known kernels with corresponding Distribution plots.
       </a>
       <br/>
 
 
-      <a class="link" href="https://arxiv.org/pdf/2305.09378v1.pdf" target="_blank">
+      <a class="link" href="https://arxiv.org/pdf/2305.09378v1.pdf" target="_blank" title="This is the first copy of the paper that was submitted as a project at my university as a semester project supervised by prof Stefano Nichele.">
         <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">Submitted Project Paper at HiØ
       </a>
       <br/>
 
-      <a class="link" href="https://drive.google.com/file/d/1RKO4pgvmtRcrPdKmztOM9tHo5m3tilWP/view?usp=drive_link" target="_blank">
+      <a class="link" href="https://drive.google.com/file/d/1RKO4pgvmtRcrPdKmztOM9tHo5m3tilWP/view?usp=drive_link" target="_blank" >
         <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/.zip_OneDrive_icon.svg/2048px-.zip_OneDrive_icon.svg.png">Complete Zip folder for reproducing all notebooks (2.58GB)
       </a>
       <br/>
@@ -324,7 +324,7 @@
       <h2>Complete Applied CS Project course folder</h2>
       
 
-      <a class="link" href="https://drive.google.com/drive/folders/1TFbzHWZOY1y7a8heA4IClM6YNebbMPDL?usp=sharing" target="_blank">
+      <a class="link" href="https://drive.google.com/drive/folders/1TFbzHWZOY1y7a8heA4IClM6YNebbMPDL?usp=sharing" target="_blank" title="This heavy drive folder contains all files and folders that were created during the project. It also contains original plots data, image vecotrs and rest of the codes. Diagram maker folders contains original diagram vecotrs and plot data. Gaussian kernel folder contains animations to visualise gaussian distribution matehmatically. lenia_ae_combined folder contains all notebooks in the experiment folder, while extra files are there in the same folder. Experiemnts folder contains all notebooks that are also put as drive link above. Lenia creatures folder contains captured complex behaviour. It is still in progress as it is a long term task and evolution takes time. You can also explore rest folder for references and base files that were used to reproduce Lenia.">
         <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">Drive folder of the complete project
       </a>
       
