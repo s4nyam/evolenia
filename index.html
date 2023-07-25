@@ -7,6 +7,39 @@
 "https://em-content.zobj.net/thumbs/160/apple/155/dna-double-helix_1f9ec.png" 
         type = "image/x-icon">
   <style>
+
+    /* Styles for the citation container */
+    #citation-container {
+      position: relative;
+    }
+
+    /* Styles for the citation box */
+    #citation-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      resize: none;
+      width: 100%;
+      min-height: 100px;
+      font-family: "Arial", sans-serif;
+    }
+
+    /* Styles for the copy button */
+    #copy-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -388,6 +421,17 @@
   <img class="zoomed-image" src="" alt="Zoomed Image">
 </div>
 
+<br/><br/>
+<div id="citation-container">
+  <!-- Copy button -->
+  <button id="copy-btn">&#x2398; Copy Citation</button>
+
+  <!-- Citation box -->
+  <textarea id="citation-box" readonly></textarea>
+</div>
+
+
+
     </div>
   </div>
 
@@ -471,6 +515,40 @@ function hideZoomPopup() {
   
     // Show the first image on page load
     showImage(currentImage);
+
+
+
+
+    const copyBtn = document.getElementById('copy-btn');
+    const citationBox = document.getElementById('citation-box');
+
+    // Function to format date as dd-mm-yyyy
+    function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}-${month}-${year}`;
+    }
+
+    // Set the "Date Accessed" dynamically
+    const currentDate = new Date();
+    const formattedDate = formatDate(currentDate);
+    const citation = `@misc{s4nyamEvoLeniaPortal,
+  author = {},
+  title = {{E}vo-{L}enia portal --- s4nyam.github.io},
+  howpublished = {\\url{https://s4nyam.github.io/evolenia/}},
+  year = {},
+  note = {[Accessed ${formattedDate}]},
+}`;
+    citationBox.textContent = citation;
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', () => {
+      citationBox.select();
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      alert('Citation copied to clipboard!');
+    });    
   </script>
   
 </body>
