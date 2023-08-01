@@ -1,614 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Evo-Lenia portal</title>
-  <link rel = "icon" href = 
-"https://em-content.zobj.net/thumbs/160/apple/155/dna-double-helix_1f9ec.png" 
-        type = "image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evo-Lenia Portal</title>
   <style>
-
-    /* Styles for the citation container */
-    #citation-container {
-      position: relative;
-    }
-
-    /* Styles for the citation box */
-    #citation-box {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 10px;
-      resize: none;
-      width: 100%;
-      min-height: 100px;
-      font-family: "Arial", sans-serif;
-    }
-
-    /* Styles for the copy button */
-    #copy-btn {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      position: absolute;
-      top: 5px;
-      right: 10px;
-    }
-
-
     body {
       font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
-      padding: 20px;
-      background-color: #f2f2f2;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
     }
 
     h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #666;
-    }
-
-    #text-section,
-    #image-section,
-    #links-section {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-image {
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-
-    .project-image2 {
-      padding: 5px;
-      box-sizing: border-box;
-    }
-
-    .project-image2 img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .link {
-      display: flex;
-      align-items: center;
+      font-size: 28px;
       margin-bottom: 10px;
-      color: #333;
-      text-decoration: none;
-      border: 1px solid #333;
-      padding: 5px;
-      border-radius: 5px;
-      display: inline-block;
     }
 
-    .link:hover {
-      background-color: #333;
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-style: italic;
+      text-align: justify;
+      padding: 30px; /* Add padding to the text */
+      border: 5px solid #ccc; /* Add a border around the text */
+      border-radius: 5px; /* Add rounded corners to the border */
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
       color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.2s;
     }
 
-    .link-icon {
-      width: 16px;
-      height: 16px;
-      margin-right: 5px;
+    a:hover {
+      background-color: #0056b3;
     }
-
-    .twitter-tweet {
-      margin-top: 20px;
-    }
-
-    @media screen and (min-width: 768px) {
-      .container {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-/* Container for tooltip boundary */
-.tooltip-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Stylize the tooltip */
-    .link[title] {
-      position: relative;
-    }
-/* Stylize the tooltip */
-.link[title]::before {
-  content: attr(title);
-  background-color: #333;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  font-size: 14px;
-  white-space: normal;
-  width: 300px; /* Set the width to 300 pixels */
-}
-
-
-    /* Show the tooltip on hover */
-    .link[title]:hover::before {
-      opacity: 1;
-    }
-    .slideshow-container {
-      max-width: 450px;
-      max-height: 260px;
-      position: relative;
-      margin: auto;
-      overflow: hidden;
-    }
-    
-    .slide-wrapper {
-      display: flex;
-      transition: transform 0.3s ease; /* Smooth transition on click */
-    }
-    
-    .slide-item {
-      flex: 0 0 300px;
-    }
-
-    /* Ensure images maintain a ratio of 300x200 (aspect ratio of 3:2) */
-    .slideshow-img {
-      width: 450px;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .prev, .next, .zoom-button {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 10px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      user-select: none;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-
-    .prev{
-      left: 0;
-      /* font-size: 5px; */
-      /* padding: 5px; */
-    }
-    .zoom-button {
-      left:45%;
-      top:0;
-      font-size: 7px;
-      padding: 2px;
-    }
-
-    .next {
-      right: 0;
-      /* font-size: 5px; */
-      /* padding: 5px; */
-    }
-    
-    .prev:hover, .next:hover, .zoom-button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .zoom-popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  width: 95%; /* Set the desired width here */
-  height: 95%; /* Set the desired height here */
-}
-
-    .zoomed-image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-
-
-    /* Close button styles */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 50px;
-  font-weight: bold;
-  color: rgb(255, 0, 0);
-  cursor: pointer;
-}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Evo-Lenia Portal: Capturing Emerging Complexity in Lenia</h1>
-    
-    
-
-    
-
-    
-    <!-- https://urbanity.nilu.no/wp-content/uploads/sites/17/2021/11/1615827361780.jpeg -->
-    <div id="text-section">
-      <h2>What is Evo-Lenia portal?</h2>
-      <p>Evo-Lenia is the supporting material for paper - "Capturing Emerging Complexity in Lenia" which is accepted in WIVACE2023</p>
-      <p>Here you will find all code and material to reproduce the paper work. It is divided into multiple parts. Each part corresponds to a Google Colab notebook where you can create your own version of code and run all cells along with other required offline material.</p>
-    </div>
-    
-    <div id="image-section">
-    
-      <h2>Some results from Evo-Lenia</h2>
-      <div class="project-image2">
-        <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/ring.gif" alt="wivace">
-      </div>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">An Evolutionary Computation EvoLenia run for 500 generations on default growth function and a handcrafted kernel shows a ring forming bacteria. Amazed by the robustness of Lenia behaviour, while mutating kernel variation based fitness. <br><br>Part of project supervised by <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> <a href="https://t.co/jLvl5E10s2">pic.twitter.com/jLvl5E10s2</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1655672132406222850?ref_src=twsrc%5Etfw">May 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <div class="project-image">
-        <img src="https://ia802700.us.archive.org/15/items/lenia/o2.gif" alt="Project Image 2">
-      </div>
-      <div class="project-image">
-        <img src="https://ia902700.us.archive.org/15/items/lenia/o3.gif" alt="Project Image 3">
-      </div>
-      <!-- <div class="project-image">
-        <img src="https://ia902700.us.archive.org/15/items/lenia/o6.gif" alt="Project Image 1">
-      </div> -->
-      <div class="project-image">
-        <img src="https://ia802700.us.archive.org/15/items/lenia/05.gif" alt="Project Image 1">
-      </div>
-      <div class="project-image">
-        <img src="https://ia902700.us.archive.org/15/items/lenia/07.gif" alt="Project Image 1">
-      </div>
-      <!-- "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/new.gif" -->
-      <div class="project-image">
-        <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/new.gif" alt="Project Image 1">
-      </div>
-
-      
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There is a standard taxonomy for a specie to be part of Lenia-verse (Family and Expanded universe). But how about some alien life, that of course do not fulfils the taxonomy or classification, but still helps us understand the dynamics and emergence of complexity! <a href="https://t.co/D7lhs6LZSy">pic.twitter.com/D7lhs6LZSy</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1662160757868355584?ref_src=twsrc%5Etfw">May 26, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-
-      <div class="project-image">
-        <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/gif40.gif" alt="Project Image 1">
-      </div>
-      <h2>Venue</h2>
-      <div class="project-image2">
-        <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/wivace.jpg" alt="wivace">
-      </div>
-      
-    </div>
-    
-    <div id="links-section">
-      <h2>Notebooks (AWS Sagemaker)</h2>
-      
-      <a class="link" href="https://arxiv.org/abs/2305.09378" target="_blank" title="This link opens a arxiv preprint version of the WIVACE 2023 submitted and accepted paper. You can also check older versions for Applied Project submitted paper which contains detailed description of each fitness criteria.">
-        <img class="link-icon" src="https://storage.googleapis.com/kaggle-datasets-images/612177/5023398/ed4470482e04000d11d3de82e2fb4389/dataset-card.png?t=2023-02-22-23-00-49">ArXiv Preprint
-      </a>
-      <br/>
-      <a class="link" href="https://github.com/s4nyam/APCSP" target="_blank" title="This link redirects to the GitHub repo of this project. It contains notebook for three fitness functions separately. You can also try to check history of commits at different times to understand the project progress over time. Previous commits also contain code for different kernels and playing around with lenia-lh.">
-        <img class="link-icon" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png">GitHub Repository
-      </a>
-      <h4>The following drive folders contains various notebooks that can be run on simple t3.medium or r5.xlarge sagemaker instances with 50GB storage space. Please check slides and extra material for exact system requirements.</h4>
-      
-      
-      
-      <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/12NLJuoNY8EhtPN_pXSoS3Kv4388CTGu1?usp=drive_link" target="_blank" title="In this method, the input data is reconstructed to its original form and then the Mean Squared Error (MSE) between the original data and the reconstructed data is calculated. This is done for all the frames in the input data, and the MSE values are collected in a list. Finally, a standard deviation is calculated over the list of MSE values, which gives an overall measure of how well the input data was reconstructed. If the population standard deviation (pstd) of the list of MSE values is higher, it means that the fitness scores of the individuals in the population are more varied. This indicates that the individuals are performing very differently in terms of their ability to reconstruct the original input. On the other hand, if the pstd is lower, it means that the fitness scores are more similar across the individuals in the population. This indicates that the individuals are performing more similarly in terms of their ability to reconstruct the original input.">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AE: Evolve new Lenia behaviour using Auto Encoder fitness
-      </a>
-
-
-      <br/>
-  
-      <a class="link" href="https://drive.google.com/drive/folders/1-F6jkAfBS0vo9rBQLl19Ui8jgr9S2zxq?usp=sharing" target="_blank" title="This method does not require any bottleneck to calculate fitness. It directly takes board input frames and uses pixel values to calculate pstd over frames. First, it uses a threshold to calculate the number of alive cells in each frame. For a continuous CA, the pixel values are in fraction and hence threshold also need to be a decimal value between 0 and 1. Further, after setting the threshold, each frame results a number of alive cells. All frames are processed and a list of number of alive cells is created. Finally, a pstd is calculated over that list. A lower standard deviation means that the CA is more stable and predictable, while a higher standard deviation indicates more randomness or instability.">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">VoT: Evolve new Lenia behaviour using Variation over Time fitness
-      </a>
-      
-
-
-      
-
-      <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/1ifjctF4ioUyYusBSRG1Jy_yskkOI4OtS?usp=drive_link" target="_blank" title="This method combines both the approaches. First, reconstruction of the original frames is collected using AE. All the reconstructed frames are further passed to VoT method and produces a pstd over the list of alive cells count of each frame. And similar to VoT, a higher pstd is expected here as well. Figure 8 shows Algorithm for AEVoT.">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness.
-      </a>
-      
-      <br/>
-      <a class="link" href="https://drive.google.com/drive/folders/1A6m-YQkoLPt4ZCoHqy9Aco0hl1Sl6fZV?usp=sharing" target="_blank" title="This is AEVoT fitness with initialising population with known kernel pixels. We consider 16x16 size of known kernels. To compare our experiments with handcrafted kernels or known kernel, we perform six experiments keeping growth function and rest of the configuration same. Known kernels are very robust to perturbations. Even after doing mutations for these kernels they show similar behaviour and complexity measurement remains same. However, the growth of fitness happens very slow in those generations, which means known kernels and their behaviour remains robust even after perturbations. Rest of the time even after mutations the fitness measure remained same and hence the overall system remained robust in terms of pixel variation and pixel density. Finally, after handcrafting a kernel with a smoothed spherical Gaussian pixel distribution. Metaphorically, it shows ring like bacteria pattern.">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">AEVoT Known Kernel: Evolve new Lenia behaviour using Combined approach of VoT and AE fitness and mutating known kernels.
-      </a>
-
-      <h2>Other Material</h2>
-      <a class="link" href="https://drive.google.com/file/d/1xtbS6ntVGzyDtTyNGRN3urm6lWoGNqtu/view?usp=drive_link" target="_blank" title="Fig. 16. of the preprint paper, Running 500 generation based simulation for known kernels. The configuration is kept same as the simulation shown in Figure 15 second row. First column shows the initial known kernel, second column shows mutated kernel after 500 generations. Additionally, third column shows best fitness plot and fourth column shows average fitness plot with cumulative mean-average line in between. (Plots have a y-limit of 2000)">
-        <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">All known kernels with corresponding Distribution plots.
-      </a>
-      <br/>
-
-
-      <a class="link" href="https://arxiv.org/pdf/2305.09378v1.pdf" target="_blank" title="This is the first copy of the paper that was submitted as a project at my university as a semester project supervised by prof Stefano Nichele.">
-        <img class="link-icon" src="https://qph.cf2.quoracdn.net/main-qimg-818899f8e90f95504d9443835aceb2f8">Submitted Project Paper at HiØ
-      </a>
-      <br/>
-
-      <a class="link" href="https://drive.google.com/file/d/1RKO4pgvmtRcrPdKmztOM9tHo5m3tilWP/view?usp=drive_link" target="_blank" >
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/.zip_OneDrive_icon.svg/2048px-.zip_OneDrive_icon.svg.png">Complete Zip folder for reproducing all notebooks (2.58GB)
-      </a>
-      <br/>
-
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How to capture emerging complexity 🌀 in a 2D grid continuous cellular automata (Lenia) system using Genetic Algorithm 🧬 ? <br><br>arXiv: <a href="https://t.co/403mHYQ9XQ">https://t.co/403mHYQ9XQ</a> 📝 with Aarati and supervision of <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> at <a href="https://twitter.com/hiofnorge?ref_src=twsrc%5Etfw">@hiofnorge</a> <br><br>A thread 🧵</p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1660235194157203458?ref_src=twsrc%5Etfw">May 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-      <br/>
-
-
-      <a class="link" href="https://hiof-my.sharepoint.com/:p:/g/personal/sanyamj_hiof_no/Ed--jYf3jp1BhVC4feIuYDgBSw-lkB1RHOReEu0NRv1gJA?e=DxtDmi" target="_blank">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png?20210821050414">Supervision Slides (shown at the time of supervision to Prof Stefano Nichele, HiØ)
-      </a>
-      <br/>
-
-
-      <a class="link" href="https://hiof-my.sharepoint.com/:p:/g/personal/sanyamj_hiof_no/EQBC-lhVuBpNr9ZpA8KLiKoBUEz77o6FHBquBxfrrN7mmg?e=QoS9S1" target="_blank">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png?20210821050414">Exam Slides (shown at the time of Exam to Prof Stefano Nichele and Prof Sukalpa Chanda, HiØ)
-      </a>
-      <br/>
-      <a class="link" href="https://www.youtube.com/channel/UCCBKlBRUGbLPPrIcV50np3A" target="_blank">
-        <img class="link-icon" src="https://cdn-icons-png.flaticon.com/512/3670/3670163.png">Our YouTube Channel
-      </a>
-      <br/>
-      <h2>Complete Applied CS Project course folder</h2>
-      
-
-      <a class="link" href="https://drive.google.com/drive/folders/1TFbzHWZOY1y7a8heA4IClM6YNebbMPDL?usp=sharing" target="_blank" title="This heavy drive folder contains all files and folders that were created during the project. It also contains original plots data, image vecotrs and rest of the codes. Diagram maker folders contains original diagram vecotrs and plot data. Gaussian kernel folder contains animations to visualise gaussian distribution matehmatically. lenia_ae_combined folder contains all notebooks in the experiment folder, while extra files are there in the same folder. Experiemnts folder contains all notebooks that are also put as drive link above. Lenia creatures folder contains captured complex behaviour. It is still in progress as it is a long term task and evolution takes time. You can also explore rest folder for references and base files that were used to reproduce Lenia.">
-        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png">Drive folder of the complete project
-      </a>
-      
-
-
-      <br/>
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Mutating new creatures and complexity for <a href="https://twitter.com/hashtag/NAIM2023?src=hash&amp;ref_src=twsrc%5Etfw">#NAIM2023</a>, Denmark with the Lenia project. <a href="https://twitter.com/hashtag/GeneticAlgorithm?src=hash&amp;ref_src=twsrc%5Etfw">#GeneticAlgorithm</a> <a href="https://twitter.com/hashtag/Lenia?src=hash&amp;ref_src=twsrc%5Etfw">#Lenia</a> <a href="https://twitter.com/hashtag/CellularAutomata?src=hash&amp;ref_src=twsrc%5Etfw">#CellularAutomata</a> with <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> and Aarati<br><br>ref: <a href="https://t.co/403mHYQ9XQ">https://t.co/403mHYQ9XQ</a> <a href="https://t.co/nAg8fDXpBu">pic.twitter.com/nAg8fDXpBu</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1671553532653076487?ref_src=twsrc%5Etfw">June 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-      <br/>
-
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am happy to share that, I got “A” in Advanced Machine Learning for the project on “The Brackish Dataset and Object Detection”, and another “A” for Applied CS project for the project on “Capturing emerging complexity in Lenia”<br><br>1 year completed of Masters🤝</p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1666339004180996096?ref_src=twsrc%5Etfw">June 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-        <h2>Extra references</h2>
-      
-
-      <a class="link" href="https://chakazul.github.io/lenia.html" target="_blank">
-        <img class="link-icon" src="https://em-content.zobj.net/source/microsoft-teams/363/dna_1f9ec.png">Bert Chan's Lenia Portal
-      </a>
-      <br/>
-
-      <a class="link" href="https://google-research.github.io/self-organising-systems/particle-lenia/" target="_blank">
-        <img class="link-icon" src="https://static.vecteezy.com/ti/vettori-gratis/p1/1878069-covid19-virus-particle-kawaii-line-style-gratuito-vettoriale.jpg">Particle Lenia
-      </a>
-      <br/>
-
-      <a class="link" href="https://sites.google.com/view/flowlenia/" target="_blank">
-        <img class="link-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNKYvaaKqwV5HnsIjQhIhqNfSApIusLsSk2yI1pCdGBRh02Ey7s0IGTBAJW4cDUyzOJs&usqp=CAU">Flow Lenia
-      </a>
-      <br/>
-    
-  
-      <h2>Slides and Information</h2>
-      
-<div class="slideshow-container">
-  <div class="slide-wrapper">
-    <div class="slide-item">
-      <img class="slideshow-img" src="" alt="Slideshow Image">
-    </div>
-    <div class="slide-item">
-      <img class="slideshow-img" src="" alt="Slideshow Image">
-    </div>
-    <div class="slide-item">
-      <img class="slideshow-img" src="" alt="Slideshow Image">
-    </div>
+    <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/ring.gif" alt="GIF">
+    <h1>Capturing Emerging Complexity in Lenia</h1>
+    <p>Abstract: This research project investigates Lenia, an artificial life platform that simulates ecosystems of digital creatures. Lenia's ecosystem consists of simple, artificial organisms that can move, consume, grow, and reproduce. The platform is important as a tool for studying artificial life and evolution, as it provides a scalable and flexible environment for creating a diverse range of organisms with varying abilities and behaviors. Measuring complexity in Lenia is a key aspect of the study, which identifies the metrics for measuring long-term complex emerging behavior of rules, with the aim of evolving better Lenia behaviors which are yet not discovered. The Genetic Algorithm uses neighborhoods or kernels as genotype while keeping the rest of the parameters of Lenia as fixed, for example growth function, to produce different behaviors respective to the population and then measures fitness value to decide the complexity of the resulting behavior. First, we use Variation over Time as a fitness function where higher variance between the frames are rewarded. Second, we use Auto-encoder based fitness where variation of the list of reconstruction loss for the frames is rewarded. Third, we perform combined fitness where higher variation of the pixel density of reconstructed frames is rewarded. All three experiments are tweaked with pixel alive threshold and frames used. Finally, after performing nine experiments of each fitness for 500 generations, we pick configurations from all experiments such that there is a scope of further evolution, and run it for 2500 generations. Results show that the kernel's center of mass increases with a specific set of pixels and together with borders the kernel try to achieve a Gaussian distribution.
+    </p>
+    <a href="https://arxiv.org/pdf/2305.09378.pdf" target="_blank">Read the Paper</a>
+    <a href="./home.html" target="_blank">Explore Evo-Lenia</a>
   </div>
-
-  <div class="prev" onclick="changeImage(-1)">&#10094;</div>
-  <div class="next" onclick="changeImage(1)">&#10095;</div>
-
-  <!-- Styled Zoom button -->
-  <div class="zoom-button" onclick="showZoomPopup()">Zoom</div>
-</div>
-
-
-<!-- Zoomed Image Popup -->
-<div class="zoom-popup" onclick="hideZoomPopup()">
-  <!-- Close button -->
-  <span class="close-button" onclick="hideZoomPopup()">&times;</span>
-  <img class="zoomed-image" src="" alt="Zoomed Image">
-</div>
-
-<br/><br/>
-<div id="citation-container">
-  <!-- Copy button -->
-  <button id="copy-btn">&#x2398; Copy Citation</button>
-
-  <!-- Citation box -->
-  <textarea id="citation-box" readonly></textarea>
-</div>
-
-<div class="project-image">
-  <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/gif10.gif" alt="Project Image 1">
-</div>
-
-
-<div class="project-image">
-  <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/gif20.gif" alt="Project Image 1">
-</div>
-
-<h2>Affiliations</h2>
-<div class="project-image2">
-  <img src="https://urbanity.nilu.no/wp-content/uploads/sites/17/2021/11/1615827361780.jpeg" alt="hio">
-</div>
-<div class="project-image2">
-  <img src="https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/clg.jpg" alt="hio">
-</div>
-
-<h5>Sanyam Jain, Aarati Shrestha, Stefano Nichele</h5>
-    </div>
-  </div>
-
   <script>
-    // Array of example image URLs
-    const imageUrls = [
-      
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-0.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-1.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-2.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-3.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-4.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-5.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-6.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-7.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-8.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-9.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-10.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-11.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-12.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-13.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-14.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-15.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-16.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-17.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-18.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-19.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-20.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-21.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-22.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-23.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-24.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-25.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-26.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-27.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-28.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-29.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-30.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-31.jpg",
-      "https://raw.githubusercontent.com/s4nyam/evolenia/main/assets_slides.jpg/f9834e54031371b8d796c7bd462b522d-32.jpg",
-      
-      
-      // Add more image URLs here as needed
-    ];
-  
-    let currentImage = 0;
-  
-    // Function to display the current image
-    function showImage(index) {
-      if (index < 0) {
-        currentImage = imageUrls.length - 1;
-      } else if (index >= imageUrls.length) {
-        currentImage = 0;
-      }
-      // Set the src attribute of the img element to display the current image
-      const slideshowImgElements = document.querySelectorAll(".slideshow-img");
-      slideshowImgElements.forEach((element) => {
-        element.src = imageUrls[currentImage];
-      });
-    }
-  
-    // Function to change the image when the navigation buttons are clicked
-    function changeImage(n) {
-      currentImage += n;
-      showImage(currentImage);
-      // Calculate the translation amount based on currentImage
-      // const translation = currentImage * -300;
-      // document.querySelector(".slide-wrapper").style.transform = `translateX(${translation}px)`;
-    }
-  
-// Function to show the zoomed image popup
-function showZoomPopup() {
-  const zoomPopup = document.querySelector(".zoom-popup");
-  const zoomedImg = zoomPopup.querySelector(".zoomed-image");
-  zoomedImg.src = imageUrls[currentImage];
-  zoomPopup.style.display = "block";
-}
-  // Function to hide the zoomed image popup
-function hideZoomPopup() {
-  const zoomPopup = document.querySelector(".zoom-popup");
-  zoomPopup.style.display = "none";
-}
-  
-    // Show the first image on page load
-    showImage(currentImage);
-
-
-
-
-    const copyBtn = document.getElementById('copy-btn');
-    const citationBox = document.getElementById('citation-box');
-
-    // Function to format date as dd-mm-yyyy
-    function formatDate(date) {
-      const day = String(date.getDate()).padStart(2, '0');
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const year = date.getFullYear();
-      return `${day}-${month}-${year}`;
-    }
-
-    // Set the "Date Accessed" dynamically
-    const currentDate = new Date();
-    const formattedDate = formatDate(currentDate);
-    const citation = `@misc{jain2023capturing,
-      title={Capturing Emerging Complexity in Lenia}, 
-      author={Sanyam Jain and Aarati Shrestha and Stefano Nichele},
-      year={2023},
-      eprint={2305.09378},
-      archivePrefix={arXiv},
-      primaryClass={cs.NE}
-}`;
-    citationBox.textContent = citation;
-
-    // Copy to clipboard
-    copyBtn.addEventListener('click', () => {
-      citationBox.select();
-      document.execCommand('copy');
-      window.getSelection().removeAllRanges();
-      alert('Citation copied to clipboard!');
-    });    
+    // JavaScript code can be added here if needed.
   </script>
-  
 </body>
 </html>
