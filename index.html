@@ -591,12 +591,13 @@ function hideZoomPopup() {
     // Set the "Date Accessed" dynamically
     const currentDate = new Date();
     const formattedDate = formatDate(currentDate);
-    const citation = `@misc{s4nyamEvoLeniaPortal,
-  author = {Sanyam Jain, Stefano Nichele},
-  title = {{E}vo-{L}enia portal --- s4nyam.github.io},
-  howpublished = {\\url{https://s4nyam.github.io/evolenia/}},
-  year = {2023},
-  note = {[Accessed ${formattedDate}]},
+    const citation = `@misc{jain2023capturing,
+      title={Capturing Emerging Complexity in Lenia}, 
+      author={Sanyam Jain and Aarati Shrestha and Stefano Nichele},
+      year={2023},
+      eprint={2305.09378},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE}
 }`;
     citationBox.textContent = citation;
 
