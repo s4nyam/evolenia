@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h1, h2, p, ul, li, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: rgb(77, 208, 12);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow content to wrap on larger screens */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 10px;
+            max-width: 150px;
+        }
+
+        .logo-1 {
+            max-width: 150px;
+        }
+
+        .logo-2 {
+            max-width: 460px;
+        }
+
+        .logo-3 {
+            max-width: 350px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Media query for larger screens */
+        @media screen and (min-width: 768px) {
+            header {
+                justify-content: flex-start; /* Move content to the left */
+            }
+
+            .logo-container {
+                margin-right: 20px; /* Add space between logos and text */
+            }
+        }
+    </style>
+    <title>WIVACE 2023, Conference Report</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo logo-3" src="https://s4nyam.github.io/logo.jpg" alt="University Logo 2">
+            <img class="logo logo-1" src="https://raw.githubusercontent.com/s4nyam/s4nyam.github.io/main/oslomet.png" alt="Conference Logo">
+            <img class="logo logo-2" src="https://raw.githubusercontent.com/s4nyam/s4nyam.github.io/main/hiof.png" alt="University Logo 1">
+        </div>
+        <div>
+            <h1>WIVACE 2023, Conference Report</h1>
+            <p>Following text reports talks, summary of presentation and keynotes of the WIVACE 2023 conference at</p>
+            <a href="https://www.unive.it/pag/47937/" target="_blank">Ca' Foscari, Venice, Italy 🇮🇹</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Conference</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at justo in dolor euismod fermentum. Integer vel accumsan erat.</p>
+        </section>
+
+        <!-- Add more sections for agenda, speakers, and sessions -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Conference Name</p>
+    </footer>
+</body>
+</html>
