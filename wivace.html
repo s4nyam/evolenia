@@ -13,7 +13,7 @@
         width: 100%;
         
     }
-        body, h1, h2, p, ul, li {
+        body, h1, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
         }
@@ -130,15 +130,116 @@
                 <a href="https://twitter.com/Michielstock">Michiel Stock</a>,
                 <a href="https://twitter.com/HonglerClement">Clément Hongler</a>,
                 <a href="https://twitter.com/barontux">Marco Tuccio</a> and many other notable researchers from the community. But we also missed <a href="https://twitter.com/EricMedvetTs">Eric Medvet</a> and <a href="https://twitter.com/BertChakovsky">Bert Chan</a>. Finally I would like to thank <a href="https://www.hiof.no/iio/itk/personer/tekn-adm-ansatte/monicak/">Monica Kristiansen Holone</a> for all support from <a href="https://www.hiof.no/english/">Østfold University College, Norway</a> and also <a href="https://www.oslomet.no/">OsloMet University, Norway</a>. The Conference venue was: Aula Mario Baratto, Dorsoduro 3246 - 30123 Venice and European Centre for Living Technology (ECLT) Ca' Bottacin, Dorsoduro 3911, Calle Crosera, 30123 Venice, Italy. Most probably the WIVACE 2024 is expected to being held in <a href="https://www.naxys.be/">NAXYS, UNIVERSITY OF NAMUR UNamur</a></p> 
-       
+       <br/><br/>
 
                 <img src="./conf_data/1.JPG" >
+                <br/><br/>
 
                 <h2>Day 1 - 6th September 2023</h2>
-                <p>
-                    
+                <p>There were multiple presentations and one keynote from day 1. Particularly there were two presentations and one keynote by Dr. Joana I would be presenting as summary for day 1. Following are the breif discussions from the respective presentations.
 
 
+        
+<p>
+    <br/><br/>
+    <h3>M1 Morning session 1: (25 min) <b>Marco Villani, Matteo Balugani and Roberto Serra with title as “The properties of pseudo-attractors in random Boolean networks”</b></h3><br/><br/>
+                 
+                To start with in sequence I found this paper: "Marco Villani, Matteo Balugani and Roberto Serra: The properties of pseudo-attractors in random Boolean networks" at <a href="https://iris.unimore.it/retrieve/c5b33d7b-4e6a-4e5d-ba94-253bf359da34/isal_a_00518.pdf" target="_blank">kind of a preprint</a>.
+                <br><br>
+                I found this extended abstract quite similar to the work of coarse graining. If you remember our coarse graining in CA (<a href="https://s4nyam.github.io/mncaportal/">proposed with MNCA</a>) the proposed idea in this paper is quite similar to that, but for Random Boolean Networks. They introduce "Pseudo-attractors" to capture the average behavior of genes or components within the network over time, even if the system gets chaotic.
+                <br><br>
+                The idea is they hypothesize and later show that genes in single real-world cells are often chaotic; however, they are interdependent. At the same time, while in the simulation of the RBN, they try to capture the same notion using pseudo-attractors.
+                <br><br>
+                To define pseudo-attractors, they calculate the average state of each node (gene) across different time steps within an attractor. "If the average state of a node is mostly 1 (on) during an attractor, it's considered to be part of the pseudo-attractor," something like frequency, don't you think so?
+                <br><br>
+                Reducing or finding the periodic attractors from a chaotic one is something they emphasize a lot and then choose real-world data to compare and analyze gene expression or other cellular activities.
+                <br><br>
+                What are your thoughts?
+                I think averaging or calculating the number of 1s is something related to frequency and then utilizing the "coarse graining" or they call it as averaging to identify pseudo-attractors.
+                <br><br>
+                Title: Pseudo-attractors in Random Boolean Network Models and Single-Cell Data
+                <br><br>
+                Abstract:
+                This is a summary of a research paper that introduces two new ideas in a field called Random Boolean Networks, which are used to understand complex systems. These new ideas are called "pseudo-attractors" and the "common sea." The paper explains how these ideas can be used to understand how genes work in individual cells by analyzing their activity.
+                <br><br>
+                Introduction:
+                Imagine you want to understand how a complex system works, like how genes in our cells interact. Scientists use models to help them understand complex things. One of these models is called a Random Boolean Network (RBN). It's like a simplified version of how genes in our cells turn on and off. The RBN model can represent different behaviors, like when things are very ordered or when they seem random. This model can also help us understand how genes work, even though it's not exactly like real cells.
+                <br><br>
+                In this RBN model, each gene's behavior is influenced by other genes and their rules for turning on and off. The model works in steps, where each step is like a moment in time. At each step, genes can change their state based on their rules and the states of other genes. This process is called "updating." However, in this paper, they're mostly focusing on a version where all the genes change at the same time, which might not be exactly how it happens in real cells.
+                <br><br>
+                Pseudo-attractors and Common Sea:
+                Now, imagine you're watching how genes change over time. You might notice some patterns that genes follow. These patterns are called "attractors." Attractors can be stable states (like when genes settle down to a specific pattern) or cycles (like when genes keep repeating a pattern). But here's the tricky part: the patterns we see can change a lot based on how we're looking at them. It's like seeing different things depending on how we look at them.
+                <br><br>
+                So, in this paper, they introduce a new idea called "pseudo-attractors." These are like patterns that genes tend to follow on average, even if things seem a bit chaotic. To make it simple, they're finding a way to look at the average behavior of genes even if things seem to be changing a lot.
+                <br><br>
+                Then, they talk about the "common sea." Imagine you're comparing these patterns for different cells. Some genes might behave in similar ways in different cells. They call this the "common sea." It's like finding the parts that are the same in different cells. The rest of the genes are in the "specific part," which are the parts that are different between cells.
+                <br><br>
+                Applying to Real Data:
+                Now, let's switch from the model to real cells. Scientists can measure how genes are behaving in single cells. But this data can be messy and hard to understand. The paper suggests using the ideas of pseudo-attractors and the common sea to make sense of this data.
+                <br><br>
+                For example, they took real data from cells and turned it into simpler patterns using pseudo-attractors. They found that some genes tend to behave similarly across different types of cells. This is like finding the common sea in real cells.
+                <br><br>
+                Conclusion:
+                This paper introduces two new concepts, pseudo-attractors and the common sea, in a model called Random Boolean Networks. These concepts help us understand how genes might work in individual cells. They show that these ideas can also be useful for understanding real data from cells. This kind of work could help us better understand how genes behave in complex systems like our bodies.
+                <br><br>
+                A pseudo-attractor is a concept introduced in the context of Random Boolean Networks (RBNs) to capture the average behavior of genes or components within a network over time, even if the system's dynamics appear to be somewhat chaotic or variable.
+                <br><br>
+                <img src="./conf_data/2.png" >
+                <br/><br/>
+                <ul>
+                    <li>
+                        Random Boolean Networks (RBNs):
+                        <p>An RBN is a mathematical model used to study complex systems, often applied to gene regulatory networks.</p>
+                        <p>In an RBN, each "node" represents a gene or a component, and these nodes can be either in an "on" state (1) or an "off" state (0).</p>
+                        <p>Nodes are connected in a network, and they influence each other's states based on specific rules or functions.</p>
+                    </li>
+                    <br/><br/>
+                    <li>
+                        Attractors in RBNs:
+                        <p>In RBNs, "attractors" are patterns or states that the nodes tend to settle into over time. These can be stable points (where the system doesn't change) or cycles (where the system repeats a pattern).</p>
+                    </li>
+                    <br/><br/>
+                    <li>
+                        Pseudo-attractors:
+                        <p>In real-world biological systems, such as gene expression in cells, the behavior of genes is influenced by various factors and can be quite complex and noisy.</p>
+                        <p>Pseudo-attractors are introduced to capture the overall or average behavior of genes even if the system's dynamics seem chaotic or noisy.</p>
+                        <p>Imagine if you watch a system evolving over time and it seems like it's changing a lot, but if you step back and look at it from a broader perspective, you might notice some patterns that repeat on average. These repeating patterns are like pseudo-attractors.</p>
+                    </li>
+                    <br/><br/>
+                    <li>
+                        Calculating Pseudo-Attractors:
+                        <p>To define pseudo-attractors, researchers calculate the average state of each node (gene) across different time steps within an attractor.</p>
+                        <p>If the average state of a node is mostly 1 (on) during an attractor, it's considered to be part of the pseudo-attractor.</p>
+                        <p>This helps capture the genes' typical behavior during attractors, even if they might oscillate or change during individual steps.</p>
+                    </li>
+                    <br/><br/>
+                    <li>
+                        Importance and Use:
+                        <p>Pseudo-attractors provide a way to understand the overall behavior of genes in a more stable manner, even if the system's dynamics seem complex.</p>
+                        <p>They offer a simplified view of gene behavior that can be useful for interpreting experimental data or making connections between the RBN model and real-world biological systems.</p>
+                        <p>Pseudo-attractors help bridge the gap between the abstract RBN model and the complexity of gene expression in actual cells.</p>
+                    </li>
+                </ul>
+                <br/><br/>
+                In essence, a pseudo-attractor is like an "average behavior pattern" that helps us see the underlying order within the seemingly chaotic dynamics of a complex system like gene regulation.
+            </p>
+
+
+            <br/><br/>
+            <h3>M2 Morning session 2: <b>(25 min) <a href="https://twitter.com/jjmerelo">Prof. JJ Merelo</a> and M. Cristina Molinari The complex networks of the Republic of Venice</b></h3><br/><br/>
+            
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The complex network of the Republic of Venice, presented at <a href="https://twitter.com/hashtag/WIVACE2023?src=hash&amp;ref_src=twsrc%5Etfw">#WIVACE2023</a> in Venice by <a href="https://twitter.com/jjmerelo?ref_src=twsrc%5Etfw">@jjmerelo</a> wearing the outfit of Venezia football club 👍 <a href="https://t.co/kM5SVCx64D">pic.twitter.com/kM5SVCx64D</a></p>&mdash; Stefano Nichele (@stenichele) <a href="https://twitter.com/stenichele/status/1699366810628268361?ref_src=twsrc%5Etfw">September 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <br/>
+            Read more relevant work at <a href="https://econpapers.repec.org/paper/venwpaper/2023_3a13.htm">Molinari, M. C. (2023). Much ado about nothing: voting in sixteenth-century Republic of Genoa. Constitutional Political Economy, 1-22.</a>
+            <br/>
+            <img src="./conf_data/3.png" >
+            <br/>
+
+            <br/><br/>
+            <h3> <b> <a href="https://twitter.com/joanarcxavier">Dr. Joana C. Xavier</a> Keynote Speech: Autocatalysis and the origins of life on Earth</b></h3><br/><br/>
+            <img src="./conf_data/4.JPG" >
+
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">When I see other type of self-replicating hardware I&#39;ll believe it :) in the software world so far we only have Intelligent Design - and Life it&#39;s natural and autopoietic</p>&mdash; Dr. 𝗝𝗼𝗮𝗻𝗮 𝗖. 𝗫𝗮𝘃𝗶𝗲𝗿 (@joanarcxavier) <a href="https://twitter.com/joanarcxavier/status/1699452221249798524?ref_src=twsrc%5Etfw">September 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
