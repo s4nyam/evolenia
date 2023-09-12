@@ -10,6 +10,29 @@
 
 }
 
+.carousel-container2 {
+  position: relative;
+
+}
+
+.carousel2 {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-height: 100%; /* Adjust the max height as needed */
+  overflow: hidden;
+}
+
+.carousel2 img {
+  display: none;
+  /* width: 100%; */
+  height: auto;
+}
+
+
+
+
+
 .carousel {
   display: block;
   position: relative;
@@ -30,8 +53,29 @@
   margin-top: 10px;
 }
 
+
+
+.carousel-controls2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .prev-button,
 .next-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+.prev-button2,
+.next-button2 {
   background-color: #333;
   color: #fff;
   border: none;
@@ -46,6 +90,7 @@
 .next-button:hover {
   background-color: #666;
 }
+
 
 
         /* Reset some default styles for better consistency */
@@ -438,7 +483,7 @@
 
               <h2>Day 3 - 8th September 2023</h2>
               <br/>
-            At the last day of the conference, there were two keynotes and intersting 20 minute talks. While the kenotes were very interesting on the topics of protein folding by Michele Vendruscolo and another interesting keynote from Wolfgang Banzhaf, my interest got more inclined towards talk by <a href="https://michielstock.github.io/">Michiel Stock</a>, where he explained How to make everything: open-endedness in synthetic biology. I will give a detailed summary of the presentation by <a href="https://michielstock.github.io/">Michiel Stock</a>, however, first lets check out some tweets from day 3.
+            At the last day of the conference, there were two keynotes and intersting 20 minute talks. While the kenotes were very interesting on the topics of protein folding by Michele Vendruscolo and another interesting keynote from Wolfgang Banzhaf, my interest got more inclined towards talk by <a href="https://michielstock.github.io/">Michiel Stock</a>, where he explained How to make everything: open-endedness in synthetic biology. Upon asking, prof provided the slides of the conference presentation by <a href="https://michielstock.github.io/">Michiel Stock</a>, however, first lets check out some tweets from day 3.
 
             <br/>
             <br/>
@@ -451,7 +496,29 @@
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Prof Andrea nice talk on “The Hiatus Between Organism and Machine Evolution” 👏 at <a href="https://twitter.com/hashtag/WIVACE2023?src=hash&amp;ref_src=twsrc%5Etfw">#WIVACE2023</a> <a href="https://t.co/prLEko0XlD">pic.twitter.com/prLEko0XlD</a></p>&mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1700139636494860315?ref_src=twsrc%5Etfw">September 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <br/>
             <br/>
-
+            
+            <h3>Slides from the presentation from <a href="https://michielstock.github.io/" target="_blank">Michiel Stock</a></h3>
+            <div class="carousel-container2">
+              <div class="carousel2">
+                <img src="./stock_images/2023_WIVACE_page-0001.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0002.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0003.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0004.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0005.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0006.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0007.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0008.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0009.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0010.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0011.jpg">
+                <img src="./stock_images/2023_WIVACE_page-0012.jpg">
+              </div>
+              <div class="carousel-controls2">
+                <button class="prev-button2">Previous</button>
+                <button class="next-button2">Next</button>
+              </div>
+            </div> 
+            
 
                 </p>
                 
@@ -573,5 +640,103 @@
         setInterval(goToNextImage, 1000000); // Switch images every 2 seconds
       });
       </script>
+
+
+
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabContent, tabLink;
+    
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+    }
+    
+    tabLink = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tabLink.length; i++) {
+      tabLink[i].className = tabLink[i].className.replace(" active", "");
+    }
+    
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  function openLinkInNewTab(url) {
+    var isSection = ["about", "publications", "projects", "affiliations", "experience", "contact"].includes(url);
+    if (!isSection) {
+      window.open(url, "_blank");
+    }
+  }
+
+  function openPublicationPopup(title, authors, abstract) {
+    var popup = document.getElementById("publicationPopup");
+    var overlay = document.getElementById("publicationOverlay");
+    var popupTitle = document.getElementById("popupTitle");
+    var popupAuthors = document.getElementById("popupAuthors");
+    var popupAbstract = document.getElementById("popupAbstract");
+
+    popupTitle.textContent = title;
+    popupAuthors.textContent = authors;
+    popupAbstract.textContent = abstract;
+
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+  function closePublicationPopup() {
+    var popup = document.getElementById("publicationPopup");
+    var overlay = document.getElementById("publicationOverlay");
+
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+    // JavaScript code to toggle "read more" section
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButtons = document.querySelectorAll(".toggle-read-more");
+  toggleButtons.forEach(function(button) {
+    button.addEventListener("click", function(event) {
+      event.preventDefault();
+      const readMoreSection = this.previousElementSibling;
+      readMoreSection.style.display = readMoreSection.style.display === "none" ? "block" : "none";
+      this.textContent = this.textContent === "Read More" ? "Read Less" : "Read More";
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel2");
+  const prevButton = document.querySelector(".prev-button2");
+  const nextButton = document.querySelector(".next-button2");
+  let currentIndex = 0;
+  
+  const images = carousel.querySelectorAll("img");
+  const imageCount = images.length;
+  
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.style.display = i === index ? "block" : "none";
+    });
+  }
+  
+  function goToPreviousImage() {
+    currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+    showImage(currentIndex);
+  }
+  
+  function goToNextImage() {
+    currentIndex = (currentIndex + 1) % imageCount;
+    showImage(currentIndex);
+  }
+  
+  prevButton.addEventListener("click", goToPreviousImage);
+  nextButton.addEventListener("click", goToNextImage);
+  
+  // Initial setup
+  showImage(currentIndex);
+  
+  setInterval(goToNextImage, 1000000); // Switch images every 2 seconds
+});
+</script>
 </body>
 </html>
